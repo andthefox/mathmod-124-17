@@ -1,4 +1,4 @@
-# matmod1-17
+# matmod-124-17
 ------------------------
 # Вариант 124-17
 - Задание 1 - [Манипуляции с данными](https://github.com/andthefox/mathmod-124-17/tree/master/assignment_1)
