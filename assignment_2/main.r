@@ -50,15 +50,36 @@ test = row_numbers[-teach]
 #непересекающиеся подвыборки:
 teaching_tbl_unq = data[teach,]
 testing_tbl_unq = data[test,]
+# МОДЕЛЬ 1
 #создаем модель линейной регрессии
 model = lm(formula, data = data);model
 #коэффициенты
 coef(model)
 #остатки
 resid(model)
-#доверительные интервалы
+#доверительный интервал
 confint(model)
-#summary по модели
+#P-значения по модели
 summary(model)
 #дисперсионный анализ
 anova(model)
+#графическое представление модели:
+plot(model)
+
+# МОДЕЛЬ 2
+formula = as.formula(paste("h2o_flux~", "(", paste(vars,collapse = "+"), ")^2", sep="", collapse = NULL));formula
+#создаем модель линейной регрессии
+model1 = lm(formula, data = data);model
+#коэффициенты
+coef(model1)
+#остатки
+resid(model1)
+#доверительный интервал
+confint(model1)
+#P-значения по модели
+summary(model1)
+#дисперсионный анализ
+anova(model1)
+#графическое представление модели:
+plot(model1)
+
