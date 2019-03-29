@@ -32,7 +32,7 @@ glimpse(data)
 #Если бы нам требовалось выбрать ночное или дневное время, мы бы изменили тип данных колонки daytime и использовали её в следующей команде
 #data$daytime = as.logical(data$daytime)
 #оставим данные только по весеннему периоду 2013 года:
-data = data[data$DOY>=91 & data$DOY<=151 & year(data$date) == 2013, c(1:ncol(data))] 
+data = data[data$DOY>=60 & data$DOY<=151 & year(data$date) == 2013, c(1:ncol(data))] 
 #выберем все переменные типа numeric
 data_numeric = data[,sapply(data,is.numeric) ]
 #все остальные переменные:
